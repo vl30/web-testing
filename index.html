@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-bg"></div>
+        <div class="container">
+            <img src="assets/thumb.png" alt="Profile Picture" class="profile-img">
+            <h1 class="name" data-aos="zoom-in">Naufal Dzakwan Az Zuhdi</h1>
+            <p class="title" data-aos="fade-up">pelajar</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="about" data-aos="fade-up">
+                <h2>Tentang Saya</h2>
+                <p>bukan siapa siapa yang hebat saya adalah seorang pelajar di smkn 2 Bandar lampung dan saya menyukai coding</p>
+            </div>
+
+            <section class="gallery-section">
+                <div class="container">
+                    <h2 class="gallery-title" data-aos="fade-down">Pengalaman saya</h2>
+                    <div class="gallery-container" data-aos="fade-up">
+                        <div class="gallery-wrapper">
+                            <div class="experience-card">
+                                <h3 class="experience-title">membangun bot WhatsApp</h3>
+                                <p class="experience-date">2021 - Sekarang</p>
+                                <p class="experience-description">Dengan menggunakan node js dan libary baileys</p>
+                            </div>
+                            
+                            <div class="experience-card">
+                                <h3 class="experience-title">Membangun website marketplace</h3>
+                                <p class="experience-date">2023 - Sekarang</p>
+                                <p class="experience-description">Mengembangkan web menggunakan dan js,html,css.</p>
+                            </div>
+
+                            <div class="experience-card">
+                                <h3 class="experience-title">Membangun sebuah karakter ai desktop</h3>
+                                <p class="experience-date">2024 - Sekarang</p>
+                                <p class="experience-description">menggunakan bahasa python dan untuk 3d model menggunakan blender.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="gallery-nav">
+                        <button class="gallery-btn" onclick="slideGallery('prev')">← Previous</button>
+                        <button class="gallery-btn" onclick="slideGallery('next')">Next →</button>
+                    </div>
+                </div>
+            </section>
+            <div class="skills">
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                    <span class="skill-icon">🌐</span>HTML
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                    <span class="skill-icon">🎨</span>CSS
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                    <span class="skill-icon">⚡</span>JavaScript
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                    <span class="skill-icon">🐍</span>Python
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                    <span class="skill-icon">📦</span>Node.js
+                </div>  
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">
+                    <span class="skill-icon">🐳</span>Docker
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">
+                    <span class="skill-icon">⚙️</span>C++
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="900">
+                    <span class="skill-icon">☕</span>Java
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="1000">
+                    <span class="skill-icon">🐘</span>PHP
+                </div>
+            </div>
+
+            <div class="music-player">
+                <div class="music-disc"></div>
+                <div class="music-info">
+                    <div class="music-title">Kamu & kenangan</div>
+                    <div class="music-artist">Maundy ayunda</div>
+                </div>
+                <div class="music-controls">
+                    <button class="music-btn" onclick="previousTrack()">⏮️</button>
+                    <button class="music-btn" id="playPauseBtn" onclick="togglePlay()">⏸️</button>
+                    <button class="music-btn" onclick="nextTrack()">⏭️</button>
+                </div>
+                <audio id="audio" src="http://filezone-cdn.caliph.dev/file/d7dd78b9c369f0dfbd91.mp4"></audio>
+            </div>
+
+            <div class="animated-bg">
+                <div class="animated-circle" style="width: 100px; height: 100px; top: 10%; left: 10%;"></div>
+                <div class="animated-circle" style="width: 150px; height: 150px; top: 50%; left: 70%;"></div>
+                <div class="animated-circle" style="width: 80px; height: 80px; top: 80%; left: 30%;"></div>
+            </div>
+        
+            <div class="scroll-indicator">
+                <div class="scroll-progress"></div>
+            </div>
+        
+            <div class="floating-icon" style="top: 20%; left: 20%;">⚛️</div>
+            <div class="floating-icon" style="top: 40%; left: 80%;">🐍</div>
+            <div class="floating-icon" style="top: 70%; left: 40%;">🔧</div>
+
+            <div class="contact">
+                <a href="mailto:novaldzakwan68@gmail.com" class="contact-item" data-aos="fade-up" data-aos-delay="100">
+                    📧 novaldzakwan68@gmail.com
+                </a>
+                <a href="https://wa.me/6285840045596" class="whatsapp-btn" data-aos="fade-up" data-aos-delay="300">
+                    💬 WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
